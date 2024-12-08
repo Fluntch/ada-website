@@ -1,152 +1,12 @@
-/* General Body Styling */
 body {
   background-color: #fff;
-  padding: 50px;
+  padding-top: 100px; /* Add space for the header */
   font: 15px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   color: #595959;
   font-weight: 400;
-  overflow: auto; /* Ensure scrolling */
+  overflow: auto;
 }
 
-/* Header Styling */
-header {
-  width: 100%; /* Full width of the screen */
-  position: fixed; /* Fixed at the top */
-  top: 0; /* Positioned at the top of the screen */
-  left: 0; /* Left aligned */
-  background: #f4f4f4; /* Background color */
-  padding: 10px 0; /* Padding around header */
-  z-index: 1000; /* Ensure it stays on top */
-  box-sizing: border-box; /* Include padding in width/height calculations */
-}
-
-header h1, header p {
-  text-align: center; /* Center the title and description */
-  margin: 0;
-}
-
-header ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  text-align: center; /* Center the navigation */
-  background: #f4f4f4;
-  border-radius: 5px;
-}
-
-header li {
-  display: inline-block; /* Inline list items */
-  padding: 10px 20px;
-}
-
-header ul a {
-  font-size: 14px;
-  color: #39c;
-  text-decoration: none;
-  display: block;
-  padding: 6px 10px;
-}
-
-header ul a:hover {
-  color: #069;
-}
-
-header ul a:active {
-  background-color: #f0f0f0;
-}
-
-/* Content Styling */
-section {
-  width: 100%;
-  padding-top: 100px; /* Space for fixed header */
-  margin: 0;
-}
-
-/* Footer Styling (Optional, currently commented out) */
-/* footer {
-  width: 100%;
-  position: fixed;
-  bottom: 20px;
-  text-align: center;
-  background-color: #f4f4f4;
-} */
-
-/* Responsive Design for Smaller Screens */
-@media screen and (max-width: 960px) {
-  div.wrapper {
-    width: auto;
-    margin: 0;
-  }
-
-  header, section /*, footer */ {
-    float: none;
-    position: static;
-    width: auto;
-  }
-
-  header {
-    padding-right: 320px;
-  }
-
-  section {
-    border: 1px solid #e5e5e5;
-    border-width: 1px 0;
-    padding: 20px 0;
-    margin: 0 0 20px;
-  }
-
-  header a small {
-    display: inline;
-  }
-
-  header ul {
-    position: absolute;
-    right: 50px;
-    top: 52px;
-  }
-}
-
-@media screen and (max-width: 720px) {
-  body {
-    word-wrap: break-word;
-  }
-
-  header {
-    padding: 0;
-  }
-
-  header ul, header p.view {
-    position: static;
-  }
-
-  pre, code {
-    word-wrap: normal;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  body {
-    padding: 15px;
-  }
-
-  header ul {
-    width: 99%;
-  }
-
-  header li, header ul li + li + li {
-    width: 33%;
-  }
-}
-
-@media print {
-  body {
-    padding: 0.4in;
-    font-size: 12pt;
-    color: #444;
-  }
-}
-
-/* General Text Styling */
 h1, h2, h3, h4, h5, h6 {
   color: #222;
   margin: 0 0 20px;
@@ -195,7 +55,12 @@ a:hover small {
   color: #777;
 }
 
-/* Blockquotes */
+.wrapper {
+  width: 1080px;
+  margin: 0 auto;
+  overflow: auto;
+}
+
 blockquote {
   border-left: 1px solid #e5e5e5;
   margin: 0;
@@ -203,7 +68,6 @@ blockquote {
   font-style: italic;
 }
 
-/* Code & Pre Styling */
 code, pre {
   font-family: Monaco, Bitstream Vera Sans Mono, Lucida Console, Terminal, Consolas, Liberation Mono, DejaVu Sans Mono, Courier New, monospace;
   color: #333;
@@ -217,7 +81,6 @@ pre {
   overflow-x: auto;
 }
 
-/* Table Styling */
 table {
   width: 100%;
   border-collapse: collapse;
@@ -238,17 +101,43 @@ th {
   color: #444;
 }
 
-/* Images */
 img {
   max-width: 100%;
 }
 
-strong {
-  color: #222;
-  font-weight: 500;
+header {
+  width: 100%; /* Full-width header */
+  padding: 20px;
+  background: #f4f4f4;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-/* Horizontal Rule */
+header h1, header p {
+  margin: 0;
+  padding: 10px 0;
+}
+
+header table {
+  width: 100%;
+}
+
+header table th a {
+  text-decoration: none;
+  padding: 10px;
+  display: block;
+  color: #333;
+}
+
+section {
+  width: 100%;
+  margin-top: 20px; /* Ensure space from the header */
+  padding-bottom: 50px;
+}
+
+small {
+  font-size: 11px;
+}
+
 hr {
   border: 0;
   background: #e5e5e5;
@@ -256,3 +145,54 @@ hr {
   margin: 0 0 20px;
 }
 
+@media print, screen and (max-width: 960px) {
+  div.wrapper {
+    width: auto;
+    margin: 0;
+  }
+
+  header, section {
+    width: auto;
+  }
+
+  section {
+    border: 1px solid #e5e5e5;
+    padding: 20px 0;
+  }
+}
+
+@media print, screen and (max-width: 720px) {
+  body {
+    word-wrap: break-word;
+  }
+
+  header ul, header p.view {
+    position: static;
+  }
+
+  pre, code {
+    word-wrap: normal;
+  }
+}
+
+@media print, screen and (max-width: 480px) {
+  body {
+    padding: 15px;
+  }
+
+  header ul {
+    width: 99%;
+  }
+
+  header li, header ul li + li + li {
+    width: 33%;
+  }
+}
+
+@media print {
+  body {
+    padding: 0.4in;
+    font-size: 12pt;
+    color: #444;
+  }
+}
