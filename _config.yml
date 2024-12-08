@@ -1,11 +1,9 @@
 theme: jekyll-theme-cayman
-title: The Good, the Bad, and the Ugly, The Impact of Articles on Wikispeedia Path Success
+title: The Good, the Bad, and the Ugly : The Impact of Articles on Wikispeedia Path Success
 description: Project website
 show_downloads: False
 navigation:
   - title: Home
     url: /
-  - title: Example
-    url: example
   - title: Introduction
     url: 01_Introduction
