@@ -187,14 +187,14 @@ hr {
 }
 
 
-footer {
+*/footer {
   width:270px;
   float:left;
   position:fixed;
   bottom:50px;
   -webkit-font-smoothing:subpixel-antialiased;
 }
-
+*/
 
 @media print, screen and (max-width: 960px) {
 
@@ -203,7 +203,7 @@ footer {
     margin:0;
   }
 
-  header, section, footer {
+  header, section */, footer */ {
     float:none;
     position:static;
     width:auto;
