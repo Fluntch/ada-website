@@ -1,7 +1,7 @@
-theme: jekyll-theme-minimal
-title: ADA Template Website
-description: A template website for ADA
-show_downloads: True
+theme: jekyll-theme-cayman
+title: The Good, the Bad, and the Ugly: The Impact of Articles on Wikispeedia Path Success
+description: Project website
+show_downloads: False
 navigation:
   - title: Home
     url: /
